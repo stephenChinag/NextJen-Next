@@ -1,7 +1,7 @@
 export default function Meals() {
   return (
     <div>
-      <h1> /Meals</h1>
+      <h1> /community</h1>
     </div>
   );
 }
