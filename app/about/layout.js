@@ -1,10 +1,7 @@
-import "./globals.css";
-
 export const metadata = {
-  title: "Dante Nextjs App",
-  description: "Your first NextJS app!",
+  title: "Dante About App",
+  description: "First About Page",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
