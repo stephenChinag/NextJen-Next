@@ -1,14 +1,9 @@
-import Header from "@/components/header";
-import Link from "next/link";
-
 export default function Home() {
-  console.log("Executing");
   return (
     <main>
-      <Header />
-      <p>
-        <Link href="/about"> About</Link>
-      </p>
+      <h1 style={{ color: 'white', textAlign: 'center' }}>
+        Time to get started!
+      </h1>
     </main>
   );
 }
