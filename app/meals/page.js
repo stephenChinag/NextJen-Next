@@ -1,7 +1,10 @@
+import styles from "./page.module.css";
+
 export default function Meals() {
   return (
-    <div>
-      <h1> /Meals</h1>
-    </div>
+    <>
+      <header></header>
+      <main> </main>
+    </>
   );
 }
