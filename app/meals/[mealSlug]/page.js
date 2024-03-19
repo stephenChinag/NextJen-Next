@@ -1,15 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { getMeal } from "@/lib/meals";
+import { notFound } from "next/navigation";
 
 export default function MealDetailsPage({ params }) {
   console.log(params);
   const meal = getMeal(params.mealSlug);
+  if (!meal) {
+    notFound();
+  }
+  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
   return (
     <>
       <header className={styles.header}>
         <div className={styles.image}>
-          <Image fill src={meal.image} />
+          <Image fill src={meal.image} alt={meal.title} />
         </div>
         <div className={styles.headerText}>
           <h1> {meal.title}</h1>
@@ -24,7 +29,7 @@ export default function MealDetailsPage({ params }) {
         <p
           className={styles.instructions}
           dangerouslySetInnerHTML={{
-            __html: "...",
+            __html: meal.instructions,
           }}
         ></p>
       </main>
